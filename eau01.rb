@@ -1,7 +1,16 @@
 # ***** Combinaisons de 2 nombres *****
 # Créez un programme qui affiche toutes les différentes combinaisons de deux nombre entre 00 et 99 dans l’ordre croissant.
 
-# Fonction utilisée :
+# Fonctions utilisées :
+def result(tab)
+    while increment_is_true(tab)
+        print "#{tab[0]}#{tab[1]} #{tab[2]}#{tab[3]}, " 
+        if (tab[0] == 9 && tab[1] == 8)
+            print "#{tab[0]}#{tab[1]} #{tab[2]}#{tab[3]}" ; puts
+        end
+     end
+end
+
 def increment_is_true(tab)
     if (tab[3] <= 9)
         tab[3] += 1
@@ -44,16 +53,11 @@ end
 (puts "error: wrong number of arguments"; exit) if ARGV.size != 0
 
 # Partie 2 : Parsing
-a = 0
-b = 0
-c = 0
-d = 0
+a, b, c, d  = 0, 0, 0, 0
 tab = [a, b, c, d]
 
-# Partie 3 / 4: Résolution et Affichage
-while increment_is_true(tab)
-    print "#{tab[0]}#{tab[1]} #{tab[2]}#{tab[3]}, " 
-    if (tab[0] == 9 && tab[1] == 8)
-        print "#{tab[0]}#{tab[1]} #{tab[2]}#{tab[3]}" ; puts
-    end
-end
+# Partie 3: Résolution 
+solution = result(tab)
+
+# Partie 4 : Affichage
+puts solution
