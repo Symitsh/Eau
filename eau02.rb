@@ -7,12 +7,13 @@
 def a_l_envers(phrases, n)
     phrases.each do |i|
         n -= 1
-        (phrases[n])
+        puts (phrases[n])
     end
 end
 
 # Partie 1: Gestion d'erreur
-(puts "error." ; exit) if ARGV.size == 0
+(puts "error" ; exit) if ARGV.size == 0
+(puts "error" ; exit) if /\d/.match(ARGV[0])
 
 # Partie 2: Parsing
 phrases = ARGV
@@ -22,4 +23,4 @@ n = 0
 solution = a_l_envers(phrases, n)
 
 # Partie 4: Affichage
-puts solution
+solution
