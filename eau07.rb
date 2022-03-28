@@ -21,6 +21,7 @@ end
 
 # Partie 1: Gestion d'erreur
 (puts "error" ; exit) if ARGV.length != 1
+(puts "error" ; exit) if !ARGV[0].match?(/\D/)
 
 # Partie 2: Parsing
 string = ARGV[0]
