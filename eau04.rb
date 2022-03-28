@@ -5,24 +5,18 @@
 # Fonctions utilisées :
 def is_prime(num)
     (2...num).each do |i|
-      if num%i == 0
-        return false
-      end
-    end
+      (return false) if num%i == 0 end
     return true
 end
 
 def next_prime(n)
-    if (n <= 1)
-        return 2
-    end
+    (return 2) if (n <= 1)
     prime = n
     found = false
-    while (!found)
+
+    while !found
        prime = prime + 1
-        if(is_prime(prime) == true)
-            found = true 
-        end
+        (found = true) if(is_prime(prime) == true)
     end
     return prime
 end
