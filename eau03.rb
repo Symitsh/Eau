@@ -5,9 +5,7 @@
 
 # Fonction utilisée :
 def fibonacci_suite(n)
-  if n == 0 || n == 1
-    return n
-  end
+  (return n) if n == 0 || n == 1
   fibonacci_suite(n-1) + fibonacci_suite(n-2)
 end
   
